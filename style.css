@@ -1,62 +1,46 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the background */
+    z-index: -1; /* Keep the video behind the content */
 }
 
 .weather-container {
+    position: relative;
+    z-index: 1;
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;}
-    
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+    text-align: center;
 }
-
-
-
-/* Add more styles as needed */
-
 
 h1 {
     color: #333;
 }
 
-.location {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-input {
+input, button {
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
+    margin: 10px 0;
     border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 12px;
     background-color: #0066cc;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    color: white;
     cursor: pointer;
 }
 
@@ -65,6 +49,5 @@ button:hover {
 }
 
 .weather-info {
-    color: #333;
     margin-top: 20px;
 }
